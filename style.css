@@ -35,3 +35,107 @@
 /************************* YOUR SETTINGS *************************/
 
 /* add your css here, feel free to use comments and order them logically for better readability */
+:root {
+    --bg-light: #f9fffb;
+    --text-dark: #2c3e50;
+    --font-main: 'Segoe UI', sans-serif;
+
+    --h1-bg: #C1ECAF;
+    --h1-text: #0b0c0c;
+    --h2-text: #74A9CB;
+    --h2-border: var(--h1-bg);
+    --h3-text: #D67160;
+
+    --list-bg: #e8f8f0;
+    --list-border: #A1D69A;
+    --strong-text: var(--h3-text);
+    --code-bg: #f0f0f0;
+
+    --def-bg: #f2fef9;
+    --def-border: var(--h1-bg);
+    --def-title: var(--text-dark);
+
+    --nav-bg: var(--h2-text);
+    --nav-text: var(--code-bg);
+
+    --footer-bg: var(--h1-bg); 
+    --footer-text: var(--h1-text);
+}
+
+body { 
+  display:grid;
+  grid-template-areas:
+  "header header"
+  "nav nav"
+  "main main"
+  "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px 1fr 60px;   
+  color: var(--text-dark);
+  background: var(--bg-light);
+  min-height: 100svh;
+  font-family: var(--font-main);
+} 
+header{
+  grid-area: header; 
+}
+nav{
+  grid-area: nav; 
+}
+main{
+  grid-area: main;
+} 
+footer{
+  grid-area: footer;
+}
+article{
+  flex:0 0 20%;
+  border-style:outset;
+  margin: 20px;
+  padding: 1px;
+}
+section{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:center;
+  align-content:space-around;
+}
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--h1-text);
+}
+nav a:hover {
+  border-bottom: 2px solid var(--h3-text);
+}
+
+
+/* Andere stijling */
+footer {
+    background-color: var(--footer-bg);
+}
+h2 {
+    color: var(--h2-text);
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--h2-border);
+    padding-bottom: 5px;
+    margin: 10px 50px 20px 50px;
+}
+h1 {
+    color: var(--h1-text);
+    border-radius: 12px;
+    font-size: 2.2rem; 
+    margin-left: 20px;
+}
