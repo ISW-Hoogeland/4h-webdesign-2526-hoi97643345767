@@ -37,17 +37,17 @@
 /* add your css here, feel free to use comments and order them logically for better readability */
 :root {
     --bg-light: #f9fffb;
-    --text-dark: #2c3e50;
+    --text-dark: #1a242e;
     --font-main: 'Segoe UI', sans-serif;
 
     --h1-bg: #C1ECAF;
-    --h1-text: #0b0c0c;
+    --h1-text: #ffffff;
     --h2-text: #74A9CB;
     --h2-border: var(--h1-bg);
-    --h3-text: #D67160;
+    --h3-text: #ffffff;
 
     --list-bg: #e8f8f0;
-    --list-border: #A1D69A;
+    --list-border: #3d7935;
     --strong-text: var(--h3-text);
     --code-bg: #f0f0f0;
 
@@ -55,11 +55,13 @@
     --def-border: var(--h1-bg);
     --def-title: var(--text-dark);
 
-    --nav-bg: var(--h2-text);
+    --nav-bg:#6B8599;
     --nav-text: var(--code-bg);
+    --main: #EBF4F9;
 
-    --footer-bg: var(--h1-bg); 
+    --footer-bg: #95AAC7; 
     --footer-text: var(--h1-text);
+    --header: #758FAA; 
 }
 
 body { 
@@ -70,7 +72,7 @@ body {
   "main main"
   "footer footer";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60px 1fr 60px;   
+  grid-template-rows: 70px  60px 1fr 60px;   
   color: var(--text-dark);
   background: var(--bg-light);
   min-height: 100svh;
@@ -78,15 +80,19 @@ body {
 } 
 header{
   grid-area: header; 
+  background-color:var(--header);
+  
 }
 nav{
   grid-area: nav; 
 }
 main{
   grid-area: main;
+background-color: var(--main);
 } 
 footer{
   grid-area: footer;
+  
 }
 article{
   flex:0 0 20%;
@@ -107,7 +113,11 @@ article img {
   height: auto;
   border-radius: 8px;
 }
+nav{
 
+  background-color: var(--nav-bg);
+
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -134,7 +144,7 @@ h2 {
     margin: 10px 50px 20px 50px;
 }
 h1 {
-    color: var(--h1-text);
+    color:var(--text-dark);
     border-radius: 12px;
     font-size: 2.2rem; 
     margin-left: 20px;
