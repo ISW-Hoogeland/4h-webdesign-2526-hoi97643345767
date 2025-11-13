@@ -114,6 +114,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+   justify-content: center; /* Horizontaal centreren */
+  align-items: center;     /* Verticaal centreren */
 }
 nav a {
   text-decoration: none;
@@ -163,4 +165,9 @@ img {
 div{
   padding: 40px;
   outline: dotted;
+}
+
+
+.afbeeldingen {
+  text-align: center;
 }
